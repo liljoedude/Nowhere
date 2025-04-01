@@ -1,0 +1,76 @@
+<title>Stories at here</title>
+<body style="
+background-color: #cfc3b8;
+border: 10px solid #9e9185;
+" />
+<style>
+.parent {
+display: flex;
+justify-content: center;
+}
+.button {
+width: 100px;
+height: 50px;
+cursor: mouse;
+background-color: #c2ab95;
+display: flex;
+justify-content: center;
+border-radius: 10%;
+font-size: 2em;
+}
+.button:hover {
+width: 100px;
+height: 50px;
+background-color: #dbbfa4;
+display: flex;
+justify-content: center;
+border-radius: 10%;
+}
+</style>
+<br style="font-size: 5px;" />
+<h1 class="parent" id="Text" style="
+color: #705c49;
+font-family: 'Gill Sans', sans-serif;
+font-size: 40px;
+">Farm</h1>
+<div style="
+height: 70%;
+display: flex;
+justify-content: center;
+vertical-align: middle;
+">
+<img src="Man1.png" style="
+vertical-align: middle;
+border:  5px solid #9e9185;" />
+</div>
+<script>
+const text = document.getElementById("Text");
+const txta = ["Farm", "Tower", "Train"];
+let i = 0;
+function back(n) {
+i -= 1;
+text.innerHTML = txta.at(Math.abs(i) % 3);
+}
+function forward(n) {
+i += 1;
+text.innerHTML = txta.at(Math.abs(i) % 3);
+}
+function view(n) {
+window.open(txta.at(Math.abs(i) % 3) + ".html");
+}
+</script>
+
+<div class="parent">
+<button onclick="back();" class="button"><<</button>
+<button onclick="view();" class="button">View</button>
+<button onclick="forward();" class="button">>></button>
+</div>
+
+
+
+
+
+
+
+
+
